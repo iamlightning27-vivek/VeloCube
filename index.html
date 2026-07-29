@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Timer</title>
+  <link rel="stylesheet" href="timer.css">
+
+</head>
+<body>
+  <div class="scramble-body">
+    <div class="scramble"></div>
+  </div>
+
+  <div class="mainbody">
+    <div class="timer-wrap">
+      <div class="time">0.00</div>
+
+      <!-- Post-solve action buttons: shown once the timer stops -->
+      <div class="post-actions" id="postActions">
+        <button id="btnDelete" class="post-btn delete-btn" title="Delete solve">&times;</button>
+        <button id="btnPlus2" class="post-btn plus2-btn" title="Add 2 second penalty">+2</button>
+        <button id="btnDNF" class="post-btn dnf-btn" title="Mark as DNF">DNF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom-left stats -->
+  <div class="stats stats-left">
+    <div class="stat"><span class="stat-label">Best</span><span class="stat-value" id="statBest">-</span></div>
+    <div class="stat"><span class="stat-label">Mean</span><span class="stat-value" id="statMean">-</span></div>
+    <div class="stat"><span class="stat-label">Count</span><span class="stat-value" id="statCount">0</span></div>
+  </div>
+
+  <!-- Bottom-right stats -->
+  <div class="stats stats-right">
+    <div class="stat"><span class="stat-label">Ao5</span><span class="stat-value" id="statAo5">-</span></div>
+    <div class="stat"><span class="stat-label">Ao12</span><span class="stat-value" id="statAo12">-</span></div>
+    <div class="stat"><span class="stat-label">Ao50</span><span class="stat-value" id="statAo50">-</span></div>
+  </div>
+
+  <!-- Session button (above History button) -->
+  <button id="sessionBtn" class="session-btn">Session</button>
+
+  <!-- History button -->
+  <button id="historyBtn" class="history-btn">History</button>
+
+  <!-- History panel -->
+  <div id="historyPanel" class="history-panel">
+    <div class="history-header">
+      <h2>Solve History</h2>
+      <button id="closeHistory" class="close-btn">&times;</button>
+    </div>
+    <div id="historyList" class="history-list"></div>
+  </div>
+
+  <!-- Session panel -->
+  <div id="sessionPanel" class="session-panel">
+    <div class="history-header">
+      <h2>Sessions</h2>
+      <button id="closeSession" class="close-btn">&times;</button>
+    </div>
+    <div id="sessionList" class="session-list"></div>
+    <button id="newSessionBtn" class="new-session-btn">+ New Session</button>
+  </div>
+
+  <script src="timer.js"></script>
+</body>
+</html>
